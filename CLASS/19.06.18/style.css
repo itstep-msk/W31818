@@ -1,0 +1,72 @@
+.solar-system .sun .earth.human, .build .people.eat.coffe {
+	color: red;
+	font-size: 30px;
+}
+
+.rose .item li li .shop.meat {
+	color: blue;
+}
+
+
+.vaz2101, .gaz3110, .priora {
+	color: yellow;
+	font-size: 35px;
+}
+
+.apple {
+	color: green;
+}
+.orange {
+	color: orange;
+}
+
+.apple.orange {
+	color: blue;
+}
+
+.weapon {
+	color: purple;
+}
+
+.build .weapon {
+	font-size: 40px;
+}
+
+
+.block {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+
+div {
+	color: red;
+}
+
+p {
+	font-size: 30px;
+}
+
+.color {
+	color: white;
+	color: #ffffff;
+	color: rgb(0,255,0);
+	text-transform: uppercase;
+	text-decoration: overline;
+	letter-spacing: 10px;
+	font-family: Arial;
+	font-weight: 900;
+	font-size: 30px;
+	font-style: italic;
+	border: 10px solid orange;
+
+	border-width: 10px;
+	border-style: solid;
+	border-color: orange;
+	width: 500px;
+	height: 200px;
+}
+
+.itstep {
+	color: red !important;
+}
