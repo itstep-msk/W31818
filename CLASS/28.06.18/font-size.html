@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Font-size</title>
+</head>
+<body>
+
+<div class="apple">Привет Open Sans</div>
+<div>Привет стандартный шрифт</div>
+<div class="gradient"></div>
+<style>
+	@font-face {
+		font-family: myOpenSans;
+		src: url(OpenSans-Regular.ttf);
+	}
+	.apple {
+		font-family: myOpenSans;
+		opacity: 0.1;
+	}
+	.gradient {
+		width: 200px;
+		height: 100px;
+		background: linear-gradient(to right, red, green, yellow);
+	}
+
+</style>
+
+</body>
+</html>

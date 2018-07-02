@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media</title>
+</head>
+<body>
+<h1>Привет мир!</h1>
+<div class="apple"></div>
+<div class="orange"></div>
+<div class="plum"></div>
+
+<style>
+	.apple, .orange, .plum {
+		width: 100px;
+		height: 100px;
+	}
+	.apple {
+		background: green;
+	}
+	.orange {
+		background: orange;
+	}
+	.plum {
+		background: purple;
+	}
+	/*
+	1) от 1200 и выше
+	2) от 992px до 1200
+	3) от 778 до 992
+	4) от 320 до 778
+	5) все что меньше 320
+	*/
+	@media(max-width: 1000px) {
+		.apple {
+			width: 300px;
+		}
+		.orange {
+			width: 200px;
+		}
+		.plum {
+			width: 100px;
+		}
+	}
+	/*
+	@media(min-width: 700px) and (max-width: 900px) {
+		.apple {
+			width: 50%;
+		}
+	}
+	*/
+	h1 {
+		font-size: 100px;
+	}
+
+	@media print {
+		h1 {
+			color: yellow;
+			font-size: 50px;
+			text-decoration: underline;
+			font-style: italic;
+		}
+	}
+</style>
+
+</body>
+</html>

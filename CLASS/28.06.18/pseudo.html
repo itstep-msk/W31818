@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pseudo</title>
+</head>
+<body>
+<div>
+	<div class="apple"></div>
+	<div class="apple"></div>
+	<div class="apple"></div>
+	<div class="apple"></div>
+	<div class="apple"></div>
+	<div class="apple"></div>
+	<div class="apple"></div>
+	<div class="apple"></div>
+	<div class="apple"></div>
+	<div class="apple"></div>
+</div>
+	<style>
+		.apple {
+			width: 100px;
+			height: 100px;
+			background: green;
+			display: inline-block;
+		}
+		.apple:first-child {
+			background: orange;
+		}
+		.apple:last-child {
+			background: purple;
+		}
+		.apple:last-child:hover {
+			background: red
+		}
+		.apple:nth-child(3) {
+			background: pink
+		}
+		.apple:nth-child(odd) {
+			background: blue;
+		}
+		.apple:nth-child(even) {
+			background: yellow;
+		}
+		.apple:hover {
+			background: red;
+		}
+	</style>
+</body>
+</html>

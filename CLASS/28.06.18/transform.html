@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transfrorm</title>
+</head>
+<body>
+
+<div class="apple"></div>
+<div class="orange"></div>
+<div class="banana"></div>
+<div class="plum"></div>
+
+
+<style>
+	.apple, .orange, .banana, .plum {
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		transition: all, .25s;
+	}
+	.apple {
+		background: green;
+		transform: rotateZ(0deg);
+	}
+	.apple:hover {
+		transform: rotateZ(360deg);
+	}
+	.orange {
+		background: orange;
+		transform: scale(1);
+	}
+	.orange:hover {
+		transform: scale(2)
+	}
+	.banana {
+		background: yellow;
+		transform: skewX(0deg);
+	}
+	.banana:hover {
+		transform: skewX(50deg);
+	}
+	.plum {
+		background: purple;
+		transform: translate(0px,0px);
+	}
+	.plum:hover {
+		transform: translate(50px,50px);
+	}
+</style>
+
+</body>
+</html>
