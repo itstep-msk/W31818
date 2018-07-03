@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uikit first site</title>
+	<link rel="stylesheet" href="css/uikit.min.css">
+</head>
+<body>
+
+<nav class="uk-navbar-container" uk-navbar>
+	<div class="uk-navbar-left">
+		<div class="uk-navbar-item uk-logo">
+			<img width="70px" src="img/logo.png">
+		</div>
+	</div>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Новости</a></li>
+            <li><a href="">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div uk-slideshow="max-height: 300;" class="uk-margin-medium-top">
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="img/1.jpg" uk-cover>
+        </li>
+        <li>
+            <img src="img/2.jpg" uk-cover>
+        </li>
+        <li>
+            <img src="img/3.jpg" uk-cover>
+        </li>
+    </ul>
+</div>
+
+<div uk-grid>
+	<div class="uk-width-1-4">
+		<img class="uk-align-center" src="img/logo.png">
+	</div>
+	<div class="uk-width-1-4">
+		<img class="uk-align-center" src="img/logo.png">
+	</div>
+	<div class="uk-width-1-4">
+		<img class="uk-align-center" src="img/logo.png">
+	</div>
+	<div class="uk-width-1-4">
+		<img class="uk-align-center" src="img/logo.png">
+	</div>
+</div>
+
+<script src="js/uikit.min.js"></script>
+</body>
+</html>

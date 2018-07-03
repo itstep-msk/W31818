@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Element center</title>
+</head>
+<body>
+
+<div class="fruit">
+	<div class="apple"></div>
+</div>
+
+<div class="orange"></div>
+
+<div class="fruit-cherry">
+	<div class="cherry"></div>
+</div>
+
+<div class="parent-plum">
+	<div class="plum"></div>
+</div>
+
+<div class="banana"></div>
+
+<style>
+	.banana {
+		width: 100px;
+		height: 100px;
+		background: yellow;
+		transform: translateX(-50%);
+    	margin-left: 50%;
+	}
+	.parent-plum {
+		display: table-cell;
+		vertical-align: middle;
+		height: 200px;
+		width: 9999px;
+    	background: green;
+	}
+	.plum {
+		width: 100px;
+		height: 100px;
+		background: purple;
+		margin: 0 auto;
+	}
+	.fruit {
+		text-align: center;
+	}
+	.apple {
+		width: 100px;
+		height: 100px;
+		background: green;
+		display: inline-block;
+	}
+	.orange {
+		width: 100px;
+		height: 100px;
+		background: orange;
+		margin: 0 auto;
+	}
+	.fruit-cherry {
+		position: relative;
+		background: grey;
+		height: 200px;
+	}
+	.cherry {
+		width: 100px;
+		height: 100px;
+		background: red;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+</style>
+
+</body>
+</html>
