@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Основные операторы</title>
+</head>
+<body>
+
+<script>
+	/*
+		
+		5 + 5; // 
+		5-операнд. 
+		"+" оператор.  
+		"+" Бинарный оператор так как два операнда по бокам.
+		
+		Оператор может быть бинарным, унарным или тернарным. Это зависит от количества операндов.
+
+	
+	*/
+
+	var apple = 5;
+	-apple;
+	console.log(apple);
+	apple = -apple;
+	console.log(apple);
+
+	var tea = "Индийский";
+	var coffe = "Американо";
+	// Конкатенация
+	console.log(tea + " " + coffe);
+	console.log("Индийский" + " " + "Американо");
+	console.log("1" + "2"); // 12
+
+	/* 
+	Если один из операндов строка, то все будет строкой.*/
+	console.log("1" + 2); // 12
+	console.log(1 + "2"); // 12
+
+	var milk = "10";
+	console.log(typeof milk);
+	console.log(typeof +milk);
+
+	console.log("Ba" + "a" * 2) // "Ba" + NaN => "BaNaN"
+
+	var apples = "2";
+	var orange = "5";
+	console.log(apples + orange) // 25(string)
+	console.log(+apples + +orange) // 7(number)
+
+	// Интрементация, декрементация
+
+	var cat = 5;
+	cat++;
+	/*
+	cat = cat + 1; 
+	cat += 1;
+	*/
+	console.log("cat: " + cat)
+	cat--; // cat = cat - 1;
+	console.log("cat: " + cat)
+</script>
+
+</body>
+</html>
