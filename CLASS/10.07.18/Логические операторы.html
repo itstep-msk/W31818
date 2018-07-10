@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Логические операторы</title>
+</head>
+<body>
+
+<script>
+	/*
+	|| (ИЛИ) Если одно из условий true то результат будет true
+	&& (И) True только тогда когда все операнды true]
+	
+	|| "запинается на ПРАВДЕ(true)"
+	&& "запинается на ЛЖИ(false)"
+	*/
+	console.log("|| (ИЛИ)")
+	console.log(true || true) // true
+	console.log(false || true) // true
+	console.log(true || false) // true
+	console.log(false || false) // false
+
+	console.log("|| (ИЛИ)")
+	console.log(true || true || false) // true
+	console.log(false || true || false) // true
+	console.log(true || false || true) // true
+	console.log(false || false || false) // false
+
+	// && (И)
+	console.log("&& (И)")
+	console.log(true && true) // true
+	console.log(false && true) // false
+	console.log(true && false) // false
+	console.log(false && false) // false
+
+	var hour = 12;
+
+	if(hour < 10 || hour > 18) {
+		console.log("Магазин до 10 или после 18 закрыт");
+	} else {
+		console.log("Добро пожаловать");
+	}
+
+	var h = 12, m = 30;
+
+	if(h == 12 && m == 30) {
+		console.log("Время 12:30");
+	}
+
+	/*
+	1 && 0 // 0
+	1 && 5 // 5
+	*/
+
+
+</script>
+
+</body>
+</html>

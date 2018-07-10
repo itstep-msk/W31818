@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Условные операторы</title>
+</head>
+<body>
+
+<script>
+	/* Условный оператор: синтаксис
+
+	if (Условие) {
+		// Если условие верное
+	} else {
+		// Если условие НЕ верное
+	}
+
+	*/
+
+	var apple = 5;
+	var orange = 10;
+
+	if(apple < orange) {
+		console.log("Яблок меньше апельсинов");
+	} else {
+		console.log("Яблок больше апельсинов");
+	}
+
+	if(apple < orange) {
+		console.log("Яблок меньше апельсинов");
+	} else if (apple > orange) {
+		console.log("Яблок больше апельсинов");
+	} else {
+		console.log("Яблок столько же как иапельсинов");
+	}
+
+	/* условие ? значение1: значение2 */
+	/* условие ? условие2 ? значение3: значение4 : значение2 */
+	var result = (apple < orange) ? "Яблок меньше апельсинов":"Яблок больше апельсинов";
+
+	console.log(result);
+
+	a = 5;
+	b = 10;
+	/* var resultAandB = a > b ? true : false; */
+	var resultAandB = a > b;
+	
+</script>
+
+</body>
+</html>

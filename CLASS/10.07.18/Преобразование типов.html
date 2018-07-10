@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Преобразование типов</title>
+</head>
+<body>
+
+<script>
+	/*
+	String(); // Для преобразования в строку
+	Number(); // Для преобразования в число
+	Boolean(); // Для преобразования в логический тип
+	*/
+	var apple = 5;
+	apple = String(apple);
+	console.log(apple); // "5";
+	console.log(typeof apple); // string
+
+	var orange = "10";
+	orange = Number(orange);
+	console.log(orange); // 10;
+	console.log(typeof orange); // number
+
+	var plum = "";
+	var tea = "Английский";
+	var coffe = 0;
+	var milk = 10;
+
+	console.log("plum: " + Boolean(plum));
+	console.log("tea: " + Boolean(tea));
+	console.log("coffe: " + Boolean(coffe));
+	console.log("milk: " + Boolean(milk));
+
+	console.log(Number("100px"));
+	console.log(parseInt("100px600"));
+	console.log(Number("12.345px"));
+	console.log(parseFloat("12.345px"));
+</script>
+
+</body>
+</html>
