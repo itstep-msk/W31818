@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Функции</title>
+</head>
+<body>
+
+<script>
+	/*
+	function НазваниеФункции() { Тело функции }
+
+	*/
+	/* Не очень пример
+	console.log("----------");
+	console.log("Привет Мир");
+	console.log("----------");
+
+	console.log("----------");
+	console.log("Привет Мир");
+	console.log("----------");
+
+	console.log("----------");
+	console.log("Привет Мир");
+	console.log("----------");
+	*/
+
+	var plum = "Слива";
+
+	function greeting(name) {
+		var orange = "Апельсин";
+		// console.log(plum) Видна. так как является глобальной.
+		if(name == undefined) {
+			console.log("Ввведите имя");
+			return;
+		}
+		console.log("----------");
+		console.log("Привет " + name);
+		console.log("----------");
+	}
+	greeting("Дмитрий")
+	greeting("Сергей")
+	greeting()
+
+	/* console.log(orange) Ошибка. Переменная не объявлена */
+	/* Функция выводит в консоль
+	function calc(a,b) {
+		console.log(a + b);
+	}
+	calc(5,5);
+	*/
+	function calc(a,b) {
+		var c = a + b;
+		return c;
+	}
+	console.log(calc(5,5));
+
+	/* b^2 -4*a*c   a = -4, b = 2, c = 1* */
+
+	/* две функции в однйо
+	function checkAgeAndShowMovie(age) {
+		if(age < 18) {
+			console.log("Вам меньше 18");
+		} else {
+			console.log("Функция запуска фильма");
+		}
+	}
+
+	checkAgeAndShowMovie(18);
+
+	*/
+
+	function checkAge(age_check) {
+		if(age_check < 18) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	function showMovie(age_movie) {
+		if(checkAge(age_movie)) {
+			console.log("Функция запуска фильма");
+		} else {
+			console.log("Вам меньше 18");
+		}
+	}
+
+	showMovie(18);
+</script>
+
+</body>
+</html>

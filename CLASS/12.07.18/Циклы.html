@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Циклы</title>
+</head>
+<body>
+
+<script>
+/*
+for(Счетчик; Условие ; Шаг) {
+	Тело цикла
+}
+*/
+/*
+for(var i = 0; i <= 10 ; i++) {
+	console.log("Привет мир " + i);
+}
+*/
+
+/*
+	continue - пропустить итерацию цикла
+	break - остановить и выйти из цикла
+*/
+// Пропуск итераций
+for(var i = 0; i < 10 ; i++) {
+	if(i == 5 || i == 6 || i == 7) {
+		continue;
+	}
+	console.log("Привет мир " + i);
+}
+// Выход из цикла
+for(var i = 0; i < 10 ; i++) {
+	if(i == 5) {
+		break;
+	}
+	console.log("Привет мир " + i);
+}
+// Бескоченый цикл
+/*
+while(условие) {
+	
+}
+*/
+/*
+var i = 0;
+
+while(i < 3) {
+	console.log("Привет из цикла while");
+	i++;
+}
+
+var apple = prompt("Напишите Яблоки");
+
+while(apple != "Яблоки") {
+	alert("Написали неверно");
+	apple = prompt("Напишите Яблоки");
+}
+*/
+var result = "";
+
+for(var i = 0; i < 5; i++) {
+	result = result + "#";
+	console.log(result);
+}
+
+
+</script>
+
+</body>
+</html>
