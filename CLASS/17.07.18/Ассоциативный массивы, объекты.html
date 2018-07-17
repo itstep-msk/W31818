@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ассоциативные массивы, объекты</title>
+</head>
+<body>
+
+<script>
+	var fruits = {
+		apple:"green",
+		orange: "Оранжевый",
+		plum: "purple",
+		age: 20,
+		tiger: null,
+		bool: true,
+		motors: [1,2,3],
+		animals: {
+			dogs: [5,6,7],
+			cats: ["Какие-то","Кошки"]
+		},
+		tea: undefined,
+		greeting: function(name) {
+			return "Привет " + name
+		},
+		"Hello world": "Какой-то текст"
+	};
+
+	/*console.log(fruits.apple); // "green"
+	console.log(fruits.animals.dogs); // [5,6,7]
+	console.log(fruits.animals.dogs[2]); // 7
+	console.log(fruits.greeting("Дмитрий"));*/
+
+	/* fruits.apple == fruits["apple"] */
+
+	//console.log(fruits);
+
+	delete fruits.apple;
+
+	//console.log(fruits);
+
+	/*for(item in fruits) {
+		console.log(item);
+		console.log(fruits[item])
+	}*/
+	/*
+	console.log("orange" in fruits); // true
+	console.log("cats" in fruits); // fasle
+
+	console.log(fruits.tea == undefined) // true
+	console.log(fruits.cats == undefined) // true
+	console.log(fruits.orange == undefined) // false
+	*/
+	/*
+	{Ключ : значение, Ключ : значение}
+
+	["apple", "orange", "plum"] // [1] // apple
+
+	[1,[2,4,[5,6,7]]]
+	
+	[1][2][1] // 6
+
+	{
+		apple: 1,
+		fruits: {
+			orange: 2,
+			banana: 4,
+			vegetables: {
+				carrot: 5,
+				potatoes: 6,
+				tomat: 7
+			}
+		}
+	}
+
+	*/
+
+	var menuSetup = {
+		width: 300,
+		height: 200,
+		title: "Menu"
+	}
+
+	var menuSetup = {};
+
+	menuSetup.width = 300;
+	menuSetup.height = 200;
+	menuSetup.title = "Menu";
+
+	var user = {
+		name: "Таня",
+		age: 25,
+		size: {
+			top: 90,
+			middle: 60,
+			bottom: 90
+		}
+	}
+
+	//console.log(user.size.bottom) // 90;
+
+</script>
+
+</body>
+</html>
