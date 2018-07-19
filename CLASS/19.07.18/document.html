@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+
+<style>
+	.orange {
+		color: red;
+	}
+</style>
+
+<div class="classApple">tiger ds  rfdsa fdsafd sa</div>
+
+<script>
+	//console.log(document);
+
+	var apple = document.querySelector(".classApple");
+
+	console.log(apple); // <div class="apple">Апельсины</div>
+
+	//console.log(apple.innerHTML); // Яблоки
+	//apple.innerHTML = "<b>Апельсины</b>";
+
+	apple.style.background = "green";
+	apple.style.fontSize = "20px";
+
+	console.log(apple.classList.contains("orange"))
+
+	apple.classList.add("orange"); 	
+
+	console.log(apple.classList.contains("orange"));
+
+	var count = 60;
+
+	var myTimer = setInterval(function() {
+		if (count == 0) {
+			clearInterval(myTimer);
+			return
+		}
+		count--;
+		apple.innerHTML = count;
+	},10)
+
+</script>
+
+</body>
+</html>
