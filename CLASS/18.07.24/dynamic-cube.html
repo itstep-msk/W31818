@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic cube</title>
+</head>
+<body>
+
+<style>
+	.cube {
+		width: 0px;
+		border: 1px solid black;
+	}
+</style>
+<input type="range" class="width" value="0">
+<input type="range" class="height" value="0">
+<div class="cube"></div>
+
+<script>
+	var width = document.querySelector(".width");
+	var height = document.querySelector(".height");
+	var cube = document.querySelector(".cube");
+
+	width.addEventListener("input", function() {
+		cube.style.width = this.value + "px";
+	})
+
+	height.addEventListener("input", function() {
+		cube.style.height = this.value + "px";
+	})
+</script>
+
+</body>
+</html>

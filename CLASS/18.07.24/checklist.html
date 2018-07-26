@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checklist</title>
+</head>
+<body>
+
+<style>
+	.row {
+		background: blue;
+		color: white;
+		display: block;
+	}
+
+	.checkbox {
+		display: none;
+	}
+
+	.checkbox:checked + .row {
+		background: green;
+	}
+</style>
+
+<input class="text">
+<input type="submit" class="button">
+<div class="rows"></div>
+
+<script>
+	var text = document.querySelector(".text");
+	var button = document.querySelector(".button");
+	var rows = document.querySelector(".rows");
+	var template = "<input class='checkbox' type='checkbox'>";
+	var checkbox = document.querySelector(".checkbox");
+
+	button.addEventListener("click", function() {
+		var row = "<div class='row'>" + text.value + "</div>";
+
+		rows.innerHTML = rows.innerHTML + "<label>" + template + row + "</label>";
+		text.value = "";
+	})
+
+
+</script>
+
+</body>
+</html>

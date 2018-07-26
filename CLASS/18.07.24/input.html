@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event input</title>
+</head>
+<body>
+
+<input type="text" class="apple">
+<div class="result"></div>
+
+<script>
+	var apple = document.querySelector(".apple");
+	var result = document.querySelector(".result");
+	/*
+	input - объединяет в себе 3 события. keyup, keypress и keydown
+	*/
+	//apple.value = "1123";
+
+	apple.addEventListener("input", function() {
+		result.innerHTML = this.value;
+	})
+</script>
+
+</body>
+</html>

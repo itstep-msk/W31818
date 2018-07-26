@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+</head>
+<body>
+
+<style>
+	.apple {
+		width: 100px;
+		height: 100px;
+		background: green;
+		border-radius: 50%;
+		display: inline-block;
+	}
+	.orange {
+		width: 100px;
+		height: 100px;
+		background: orange;
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		line-height: 100px;
+		font-size: 50px;
+		font-family: Arial;
+	}
+</style>
+
+<div class="apple"></div>
+
+<div class="orange">1</div>
+<div class="orange">2</div>
+<div class="orange">3</div>
+<div class="orange">4</div>
+<div class="orange">5</div>
+
+<script>
+	// querySelector - первый элемента
+	var apple = document.querySelector(".apple");
+
+	apple.addEventListener("click", function() {
+		apple.style.background = "red";
+	})
+
+	// querySelectorAll - все элементы ввиде массива 
+	var orange = document.querySelectorAll(".orange");
+
+	for(var i = 0; i < orange.length; i++) {
+		orange[i].addEventListener("click", function() {
+			this.style.background = "red";
+		})
+	}
+</script>
+
+</body>
+</html>
