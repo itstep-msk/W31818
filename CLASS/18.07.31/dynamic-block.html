@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic block</title>
+</head>
+<body>
+
+<style>
+	.field {
+		width: 500px;
+		height: 500px;
+		border: 1px solid;
+		margin: 0 auto;
+		position: relative;
+	}
+	.block {
+		position: absolute;
+		border: 1px solid;
+	}
+</style>
+
+<div class="field"></div>
+
+<script>
+	var field = document.querySelector(".field");
+	var template = "<div class='block'></div>";
+	var block;
+	var x,y;
+
+	field.addEventListener("mousedown", function(e) {
+		this.innerHTML = template;
+		x = e.offsetX;
+		y = e.offsetY;
+
+		block = document.querySelector(".block");
+		block.style.left = x + "px";
+		block.style.top = y + "px";
+		this.addEventListener("mousemove", function(w) {
+			block.style.width = (w.layerX - x) + "px";
+			block.style.height = (w.layerY - y) + "px";
+		})
+	})
+</script>
+
+</body>
+</html>
