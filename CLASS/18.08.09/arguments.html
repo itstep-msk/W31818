@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arguments</title>
+</head>
+<body>
+
+<script>
+	function calc() {
+		var result = 0;
+
+		for(var i = 0; i < arguments.length; i++) {
+			result += arguments[i];
+		}
+
+		return result;
+		
+	}
+
+	console.log(calc(1,2,3,54,4));
+</script>
+
+</body>
+</html>

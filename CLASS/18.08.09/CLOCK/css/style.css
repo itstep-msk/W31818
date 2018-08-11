@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+}
+
+.clock {
+	width: 100px;
+	height: 100px;
+	margin: 50px auto;
+	border: 3px solid;
+	border-radius: 50%;
+	position: relative;
+}
+
+.stub {
+	background: black;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.arrow {
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    margin: auto;
+	position: absolute;
+	transform-origin: 50% 100%;
+}
+
+.hours {
+	width: 10px;
+	height: 35%;
+	background: #000;
+}
+
+.minutes {
+	width: 5px;
+	height: 40%;
+	background: blue;
+}
+
+.seconds {
+	width: 1px;
+	height: 45%;
+	background: red;
+}
