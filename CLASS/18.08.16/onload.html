@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OnLoad</title>
+</head>
+<body>
+
+<script>
+	/*window.onload = function() {
+		console.log("Документ загрузился");
+	}*/
+
+	function myLoad(fn) {
+		window.onload = fn;
+	}
+
+	myLoad(function() {
+		console.log("Документ загрузился")
+	})
+
+</script>
+
+</body>
+</html>

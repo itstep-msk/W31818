@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+</head>
+<body>
+<style>
+	.apple {
+		width: 50px;
+		height: 50px;
+		background: green;
+		border-radius: 50%;
+		display: inline-block;
+	}
+</style>
+
+<div class="apple"></div>
+<div class="apple"></div>
+<div class="apple"></div>
+<div class="apple"></div>
+<div class="apple"></div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+	$(".apple").on("click", function() {
+		$(this).css({"background":"purple"}).hide(10000);
+	});
+	/*
+	document.querySelector(".class");
+	$(".class");
+	$(".class").show();
+	$(".class").hide();
+	$(".class").addClass("apple");
+	https://jquery-docs.ru/
+	*/
+
+</script>
+</body>
+</html>
