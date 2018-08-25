@@ -1,0 +1,24 @@
+body {
+	margin: 0;
+}
+
+.tabs {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.tabs-link {
+	display: inline-block;
+	padding: 10px 15px;
+	border: 1px solid;
+}
+
+.tabs-content {
+	padding: 10px 15px;
+	border: 1px solid;
+	display: none;
+}
+
+.active {
+	background: #ccc;
+}

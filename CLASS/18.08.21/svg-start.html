@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SVG start</title>
+</head>
+<body>
+
+<svg width="100%" height="100vh">
+	<polyline class="polyline" fill="none" points="" stroke="black">
+</svg>
+
+<script>
+var polyline = document.querySelector(".polyline");
+var x = 0;
+var y = 0;
+var points = "";
+var resolution = true;
+
+function moveLine() {
+	x++;
+	if(resolution) {
+		y++;
+		if(y == 50) {
+			resolution = false;
+		}
+	}
+	if(!resolution) {
+		y--;
+		if(y == 0) {
+			resolution = true;
+		}
+	}
+
+	points += x + "," + y + " ";
+	polyline.setAttribute("points",points);
+}
+
+setInterval(moveLine)
+</script>
+
+</body>
+</html>

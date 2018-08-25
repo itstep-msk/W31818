@@ -1,0 +1,7 @@
+1) К приложению WEATHER добавить фоном изображение текущего города
+Город хранится в data.name
+Воспользоваться API от BING и подставить туда название города
+
+https://azure.microsoft.com/ru-ru/services/cognitive-services/bing-image-search-api/
+
+2) С помощью svg нарисовать линии по периметру блока

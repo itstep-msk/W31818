@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+}
+
+.popup {
+	width: 100px;
+	height: 100px;
+	background: green;
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.popup-close {
+	display: inline-block;
+	position: absolute;
+	right: 5px;
+}
+
+.shadow {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}

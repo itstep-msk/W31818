@@ -1,0 +1,73 @@
+body {
+	margin: 0;
+}
+
+.accordion {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.accordion-link {
+	padding: 10px 15px;
+	border: 1px solid;
+	position: relative;
+}
+
+.accordion-content {
+	padding: 10px 15px;
+	border: 1px solid;
+	display: none;
+	background: yellow;
+}
+
+.active {
+	background: #ccc;
+}
+
+.button {
+	background: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.button:before {
+	content: "";
+	display: block;
+	width: 2px;
+	height: 60%;
+	background: black;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transform: rotateZ(0deg);
+	transition: all, .25s;
+}
+
+.button:after {
+	content: "";
+	display: block;
+	width: 2px;
+	height: 60%;
+	background: black;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transform: rotateZ(90deg);
+}
+
+.accordion-link.active .button:before {
+	transform: rotateZ(90deg);
+}

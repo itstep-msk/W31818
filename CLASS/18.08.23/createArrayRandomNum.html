@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>createArrayRandomNum</title>
+</head>
+<body>
+
+<script>
+	/*
+	Задача: Создать функцию, которая будет принимать в качестве аргумента пустой массив и заполнять его случайными числами. Числа должны быть уникальными. Аргумента будет 2. Массив и максимальное количество значений;
+	*/
+
+	var fruitsFor = [];
+	var fruitsWhile = [];
+
+	function fillArrayFor(arr,n) {
+		
+		for(var i = 0; i < n; i++) {
+			var random = Math.floor(Math.random()*n);
+			if(arr.indexOf(random) == -1) {
+				arr.push(random);
+			} else {
+				i--;
+				continue;
+			}
+			
+		}
+	}
+	
+	function fillArrayWhile(arr,n) {
+
+		while(arr.length < n) {
+			var random = Math.floor(Math.random()*n);
+			if(arr.indexOf(random) == -1) {
+				arr.push(random);
+			} else {
+				continue;
+			}
+		}
+	}
+
+	// FOR
+	//var start = +new Date();
+	//fillArrayFor(fruitsFor,100)
+	//var end = +new Date();
+	//console.log("for: " + (end - start) + "ms");
+
+	// WHILE
+	//var start = +new Date();
+	//fillArrayWhile(fruitsWhile,100)
+	//var end = +new Date();
+	//console.log("while: " + (end - start) + "ms");
+
+	/*
+	Создать функцию, которая внутри себя будет запускать определенное кол-во итераций функции fillArrayFor и fillArrayWhile вместе с "таймерами".
+	Забирать значение таймеров и вычислять.
+	На выходе среднее значение между таймерами.
+	*/
+	function getDefirence(n) {
+		var resultFor = 0;
+		var resultWhile = 0;
+
+		for(var i = 0; i < n;i++) {
+			var start = +new Date();
+			fillArrayFor(fruitsFor,10000)
+			var end = +new Date();
+			resultFor += end - start;
+			fruitsFor = [];
+
+			var start = +new Date();
+			fillArrayWhile(fruitsWhile,10000)
+			var end = +new Date();
+			resultWhile += end - start;
+			fruitsWhile = [];
+		}
+		if(resultFor - resultWhile > 0) {
+			return "For работает дольше на: " + (resultFor - resultWhile);
+		} else {
+			return "While работает дольше на: " + (resultWhile - resultFor);
+		}
+	}
+
+	console.log(getDefirence(100))
+
+	/* 
+	indexOf() проверяет наличие значение в массиве
+	Если значение присутствует то возвращается его индекс
+	Если нет возвращает -1
+	*/
+	//console.log(fruits.indexOf(10))
+</script>
+
+</body>
+</html>
