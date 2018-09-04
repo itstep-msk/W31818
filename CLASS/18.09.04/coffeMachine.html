@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>coffeMachine</title>
+</head>
+<body>
+
+<script>
+	function CoffeMachine() {
+		var waterAmount = 0;
+		var count = 0;
+		var i;
+		var selectedCoffe;
+		var resolution = false;
+
+		var typeCoffe = {
+			latte: {
+				waterAmount: 500,
+				count: 10
+			},
+			americano: {
+				waterAmount: 300,
+				count: 5
+			},
+			espresso: {
+				waterAmount: 100,
+				count: 3
+			}
+
+		}
+
+		function onReady() {
+			count--;
+			console.log("Ваш " + selectedCoffe + " будет готов через: " + count);
+			if(count == 0) {
+				clearInterval(i);
+				console.log("Ваше " + selectedCoffe + " готов.");
+			}
+		}
+
+		this.waterAmount = function(amount) {
+			if(amount == undefined) {
+				console.log(waterAmount);
+				return;
+			}
+
+			if(amount <= 0) {
+				console.log("Недопустимое количество воды...");
+				return;
+			}
+
+			if(amount >= 1000) {
+				waterAmount = 1000;
+			} else {
+				waterAmount = amount;
+			}
+		}
+
+		this.changeCoffe = function(type) {
+			selectedCoffe = type;
+			var typeWaterAmout = typeCoffe[type].waterAmount;
+			var typeCount = typeCoffe[type].count;
+
+			if (waterAmount <= typeWaterAmout) {
+				console.log("Недостаточно воды для выбранного напитка...");
+				return;
+			} else {
+				resolution = true;
+				count = typeCount;
+			}
+			
+		}
+
+		this.run = function() {
+			if(waterAmount <= 0) {
+				console.log("Технический сбой. Ошибка №423573675...")
+				return;
+			}
+			if(resolution) {
+				console.log("Начинаем готовить ваш " + selectedCoffe + "...");
+				i = setInterval(onReady,1000)	
+			}
+		}
+	}
+
+	var bosch = new CoffeMachine();
+	bosch.waterAmount(1000);
+	bosch.changeCoffe("latte");
+	bosch.run();
+</script>
+
+</body>
+</html>

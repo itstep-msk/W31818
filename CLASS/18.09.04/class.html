@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class</title>
+</head>
+<body>
+
+<script>
+	function Animals(n,a) {
+		var legs = 4;
+		this.name = n;
+		this.age = a;
+		this.say = function(s) {
+			return "Животное говорит: " + s;
+		}
+		this.setLegs = function(l) {
+			if(l == 4) {
+				legs = l
+				return "Кол-во лап установлено: " + l;
+			} else {
+				return "Ошибочное кол-во лап"
+			}
+		}
+		this.getLegs = function() {
+			return legs;
+		}
+	}
+
+	var dogs = new Animals("Шарик", 65);
+	var pig = new Animals("Хрюня", 12);
+
+	console.log(dogs.setLegs(10))
+	console.log(dogs.say("Вуф-вуф"));
+	console.log(pig.say("Кря-кря"));
+
+	//dogs.legs = 10;
+	//console.log(dogs);
+</script>
+
+</body>
+</html>
