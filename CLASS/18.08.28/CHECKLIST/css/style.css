@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+	font-family: Arial;
+}
+
+.text {
+	width: 80%;
+	box-sizing: border-box; /* Пересчет велечин */
+}
+
+.button {
+	width: 20%;
+	margin-left: -5px; /* Осттупы у inline-овых элементов */
+}
+
+.item {
+    padding: 5px 10px;
+    background: #9a9aff;
+    color: white;
+    transition: all, .25s;
+}
+
+.item.checked {
+	background: green;
+}
