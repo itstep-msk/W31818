@@ -1,0 +1,199 @@
+body {
+	margin: 0;
+}
+
+.coffe-machine {
+    width: 450px;
+    background: #c6ebf4;
+    padding-top: 55px;
+    padding-bottom: 50px;
+}
+
+.top {
+    background: #ed5d5d;
+    width: 260px;
+    height: 115px;
+    margin: 0 auto;
+    border-radius: 45px 45px 15px 15px;
+    border: 5px solid;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.power-led {
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    width: 8px;
+    height: 8px;
+    background: #d4504a;
+    border-radius: 50%;
+}
+
+.power-icon {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    width: 8px;
+    height: 8px;
+    background: black;
+    border-radius: 50%;
+}
+
+.timer {
+	position: absolute;
+    width: 80px;
+    height: 80px;
+    background: white;
+    left: 0;
+    right: 0;
+    top: 10px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.change-coffe {
+	position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #454134;
+    right: 30px;
+    top: 25px;
+    border-radius: 50%;
+}
+
+.power-on {
+	position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #454134;
+    right: 30px;
+    top: 60px;
+    border-radius: 50%;
+}
+
+.middle {
+	background: #e5d1d2;
+    height: 160px;
+    width: 215px;
+    margin: 0 auto;
+    border-left: 5px solid;
+    border-right: 5px solid;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.middle:after {
+	content: "";
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 155px;
+    height: 18px;
+    border: 4px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.holder {
+    width: 75px;
+    height: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.holder-head {
+    background: #e8625c;
+    height: 30px;
+    border: 4px solid;
+    border-top: 0;
+    box-sizing: border-box;
+}
+
+.holder-body {
+    background: #ec5d5d;
+    width: 65px;
+    height: 6px;
+    margin: 0px auto;
+    border: 4px solid;
+    border-top: 0;
+    box-sizing: border-box;
+}
+
+.holder-taps {
+	position: relative;
+    width: 65px;
+    margin: 0 auto;
+}
+
+.holder-tap {
+	position: absolute;
+    width: 15px;
+    height: 6px;
+    background: #4a4d42;
+    border: 4px solid;
+    box-sizing: border-box;
+    border-top: 0px;
+}
+
+.holder-tap-left {
+	left: 10px;
+}
+
+.holder-tap-right {
+	right: 10px;
+}
+
+.cup {
+    width: 90px;
+    height: 65px;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-sizing: border-box;
+    border: 5px solid;
+    border-radius: 10px 10px 40px 40px;
+}
+
+.bottom {
+	background: #ed5d5d;
+    height: 70px;
+    width: 260px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 5px solid;
+    border-radius: 15px;
+}
+
+.legs {
+	width: 250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.leg {
+	width: 40px;
+    height: 15px;
+    background: #473c35;
+    position: absolute;
+    top: -5px;
+    border: 5px solid;
+    box-sizing: border-box;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.leg-left {
+	left: 25px;
+}
+
+.leg-right {
+	right: 25px;
+}
