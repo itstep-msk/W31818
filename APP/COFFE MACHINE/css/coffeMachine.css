@@ -18,6 +18,17 @@ body {
     border: 5px solid;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
+}
+
+.top:after {
+    content: "";
+    display: block;
+    background: black;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 5px;
 }
 
 .power-led {
@@ -160,7 +171,24 @@ body {
     margin: auto;
     box-sizing: border-box;
     border: 5px solid;
-    border-radius: 10px 10px 40px 40px;
+    border-radius: 10px 10px 30px 30px;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.layer-coffe {
+	height: 30px;
+	background: #553d31;
+}
+
+.layer-milk {
+	height: 35px;
+	background: #896452;
 }
 
 .bottom {
@@ -171,6 +199,18 @@ body {
     box-sizing: border-box;
     border: 5px solid;
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bottom:after {
+    content: "";
+    display: block;
+    background: black;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 5px;
 }
 
 .legs {

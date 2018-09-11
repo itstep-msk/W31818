@@ -1,0 +1,41 @@
+.circle-menu {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	margin: 50px auto;
+}
+
+.circle-menu__button {
+	background: green;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	z-index: 2;
+}
+
+.circle-menu__item {
+	background: yellow;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    border-radius: 50%;
+    transition: all, .25s;
+}
+
+.circle-menu__item.active {
+	top: -80px;
+}
+
+.circle-menu__box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -30px;
+    top: -30px;
+}
