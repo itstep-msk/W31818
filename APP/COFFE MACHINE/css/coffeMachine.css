@@ -3,10 +3,11 @@ body {
 }
 
 .coffe-machine {
-    width: 450px;
+    width: 100%;
+    height: 100vh;
     background: #c6ebf4;
     padding-top: 55px;
-    padding-bottom: 50px;
+    box-sizing: border-box;
 }
 
 .top {

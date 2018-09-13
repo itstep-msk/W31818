@@ -1,8 +1,4 @@
 .circle-menu {
-	position: relative;
-	width: 40px;
-	height: 40px;
-	margin: 50px auto;
 	transition: all, .25s;
 }
 
@@ -11,10 +7,10 @@
 }
 
 .circle-menu__button {
-	background: green;
+	background: #454134;
 	position: absolute;
-	width: 40px;
-	height: 40px;
+	width: 25px;
+	height: 25px;
 	border-radius: 50%;
 	z-index: 2;
 }
@@ -38,9 +34,9 @@
 }
 
 .circle-menu__box {
-    width: 100px;
-    height: 100px;
+	width: 35px;
+    height: 35px;
     position: absolute;
-    left: -30px;
-    top: -30px;
+    left: -5px;
+    top: -5px;
 }

@@ -19,7 +19,14 @@
 				waterAmount: 100,
 				count: 3
 			}
+		}
 
+		this.coffeList = function(key, valueObject) {
+			if(arguments.length == 0) {
+				return typeCoffe;
+			} else {
+				typeCoffe[key] = valueObject
+			}
 		}
 
 		function onReady() {
@@ -82,3 +89,7 @@
 	//bosch.waterAmount(1000);
 	//bosch.changeCoffe("latte");
 	//bosch.run();
+
+	console.log(bosch.coffeList())
+	bosch.coffeList("Nescfik",{waterAmount: 123, count: 231});
+	console.log(bosch.coffeList())

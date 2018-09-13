@@ -20,4 +20,5 @@ for(var i = 0; i < boxCount; i++) {
 
 button.on("click", function() {
 	item.toggleClass("active");
+	menu.toggleClass("active");
 })
