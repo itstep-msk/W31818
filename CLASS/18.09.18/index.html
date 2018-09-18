@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This</title>
+</head>
+<body>
+
+<script>
+	var user  = {
+		name: "Alex",
+		say: function() {
+			console.log("Hello " + user.name)
+			//console.log("Hello " + this.name)
+		}
+	}
+
+	user.say();
+
+	// ОБЪЕКТЫ ХРАНЯТСЯ ПО ССЫЛКЕ
+	// Копируем ссылку на объект
+	var admin = user;
+	console.log(admin) // {name: "Alex", say: ƒ}
+	
+	// Меняем значение ключа у объекта
+	admin.name = "admin";
+	console.log(user) // {name: "admin", say: ƒ}
+
+	// Создаем копию объекта
+	var dog = {}
+
+	// Перебираем через цикл объект user
+	// На каждрй итерации в переменную apple попадает название ключа
+	for(apple in user) {
+		dog[apple] = user[apple]
+		// Слева созаем ключ, справа получаем значение по ключу
+		// Пример dog["name"] = "Alex"
+	}
+
+	// Создали копью объекта
+	console.log(dog)
+	console.log(dog.name) // "Alex"
+	dog.name = "Sharik"
+
+	console.log(user) // {name: "admin", say: ƒ}
+
+	// Функции по ссылке
+
+	var apple = { value: 10 }
+	var orange = { value: 20 }
+
+	// Сам вызов функции с this не имеет смысла.
+	function getValue() {
+		console.log( this.value )
+	}
+
+	// Создали ссылку на функцию
+	apple.getV = getValue // function () { console.log( this.value ) }
+	orange.getV = getValue
+
+	// В таком виде this ссылкается на текущий объект куда его передали
+	apple.getV(); // 10
+	orange.getV(); // 20
+
+	// На что же ссылается this вне объекта ? на window
+	// В ES5 это нормально. В ES6 это считается ошибкой поэтому this вне объекта будет возвращать undefined
+
+	//getValue() // undefined
+
+	console.log(apple) // {value: 10, getV: ƒ}
+
+	
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Замыкания</title>
+</head>
+<body>
+
+<script>
+	function Generator(num) {
+		var n = num;
+
+		return function() {
+			return n++;
+		}
+	}
+
+	var count = Generator(0);
+
+	console.log(count()) // 0
+	console.log(count()) // 1
+	console.log(count()) // 2
+
+	var count2 = Generator(5);
+	console.log(count2()) // 5
+	console.log(count2()) // 6
+	console.log(count2()) // 7
+
+	console.log(count()) // 3
+</script>
+
+</body>
+</html>

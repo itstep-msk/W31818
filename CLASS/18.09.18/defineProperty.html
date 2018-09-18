@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Не изменяемые, защищенные и скрытые свойства объектов</title>
+</head>
+<body>
+
+<script>
+	var user = {
+		name: "Alex",
+		age: 20
+	}
+
+	// Метод keys вызывается у класса Object. В качестве аргумента принимает объект. Возвращает массив ключей.
+	console.log(Object.keys(user)) // ["name","age"]
+	console.log(user)
+
+	Object.defineProperty(user, "height", {
+		value: "100",
+		configurable: false,
+		enumerable: false,
+		writable: false
+	})
+
+	/*
+	configurable - запрет на удаление свойства
+	enumerable - отвечат за видимость свойства
+	writable - отвечает за редактирование свойства
+	*/
+
+	console.log(user);
+
+	for(item in user) {
+		console.log(item);
+	}
+
+	// name, age
+
+	delete user.height
+	user.height = 200;
+	console.log(user.height) // 100
+</script>
+
+</body>
+</html>

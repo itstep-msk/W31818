@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Преобразование объект</title>
+</head>
+<body>
+
+<script>
+	var user = {
+		name: "Alex"
+	}
+
+	alert(user)// [object Object]
+	// Когда объект преобразуется к строке вызывается внутренний метод toString
+
+	console.log(+user) // NaN
+	// Когда объект преобразуется к числу вызывается внутренний метод valueOf
+
+	user.toString = function() {
+		return "Поменяли метод";
+	}
+	// Переписали метод toString
+	alert(user) // "Поменяли метод"
+
+	user.valueOf = function() {
+		return 123
+	}
+
+	console.log(+user)
+
+	// Преобразование массивов
+
+	var fruits = [1,2,3];
+	var vegetables = [4,5,6];
+
+	// var arr = new Array()
+
+	Array.prototype.toString = function() {
+		var result = 0;
+		for(var i = 0; i < this.length; i++) {
+			result += this[i];
+		}
+		return result
+	}
+
+	//console.log(fruits + vegetables) // 1,2,34,5,6
+	console.log(fruits + vegetables)
+	console.log([4,5,6] + [5,34,2]) // 56
+</script>
+
+</body>
+</html>
