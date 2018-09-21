@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Copy method</title>
+</head>
+<body>
+
+<script>
+	function computer() {
+	/*
+	arguments - специальный "массив", который хранит в себе все передаваемые аргументы ввиде массива. Доступен только внутри функции.
+	Он не является массивом. Все что делает его похожим это доступ по индексам и свойство длинна(length)
+	*/
+		console.log(arguments);
+		//console.log(arguments.join());
+
+		/*
+		Копирование происходит при написании названия метода без круглых скобок. Копируется тело метода. Сам метод внутри себя работает с индексами массива и длинной массива а все это как раз есть в arguments поэтому нет ошибок.
+		*/
+		arguments.myJoin = [].join
+		console.log(arguments.myJoin("-"))
+	}
+
+	computer(1,2,3,4,5);
+
+	// Копирование метода push
+	var fruits = {
+		0: "apple",
+		1: "orange",
+		length: 2
+	}
+
+	fruits.myPush = [].push;
+
+	fruits.myPush("banana");
+	console.log(fruits);
+
+	//
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	// setInterval вызывается много раз.
+	//setInterval(function() {
+	//	console.log("setInterval работает")
+	//}, 1000)
+
+	// setTimeout вызывается один раз.
+	setTimeout(function() {
+		console.log("setTimeout работает")
+	}, 1000)
+
+
+	// Делаем аналог setInterval через setTimeout
+
+	setTimeout(function tick() {
+		console.log("setTimeout превратился в setInterval")
+		//console.log(Math.pow(10,100))
+		setTimeout(tick,1000);
+	},1000)
+
+</script>
+
+</body>
+</html>

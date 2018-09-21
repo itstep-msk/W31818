@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>call, apply, bind</title>
+</head>
+<body>
+
+<script>
+	// CALL
+
+	function hello() {
+		return "Hello world";
+	}
+
+	console.log(hello()); // "Hello world"
+	// вызов функции через метод call
+	console.log(hello.call()) // "Hello world"
+
+	var user = {
+		name: "Alex"
+	}
+
+	function greeting(a,b,c) {
+		return "Hello " + this.name + " " + a + b + c
+	}
+
+	/*
+	user.say = greeting
+
+	user.say() // "Hello Alex";
+	*/
+
+	console.log(greeting(1,2,3)) // Hello .....
+	console.log(greeting.call(user,1,2,3)); // Hello Alex 123
+
+	/*
+	Метод call вызывается у функции. Первым аргументом является объект, на который врутренние this будут ссылаться
+	*/
+
+	// APPLY
+	console.log(greeting.apply(user, [1,2,3])) // Hello Alex 123
+	/*
+	Отличие apply от call в том, что apply принимает вместо аргументов массив аргументов. Аргументы можно добавлять динамически
+	*/
+	/*
+	setTimeout(function() { 
+		console.log("Таймер работает")
+	}, 1000 );
+	*/
+
+	function helloFromTimer() {
+		console.log("Hello " + this.name);
+	}
+
+	setTimeout(helloFromTimer, 1000); // Hello ... без имени
+	// setTimeout(helloFromTimer(), 1000); такой вызов не уместен так как функция вызывается не внутри таймера. Чтобы вызывалась внутри таймера нужно передавать ссылку на функцию без скобок
+
+	setTimeout(helloFromTimer.call(user), 1000); // Hello ... без имени Такой вызов тоже недопустим так как call делает тоже самое и ();
+
+	setTimeout(helloFromTimer.bind(user), 1000) // Hello Alex
+	/*
+	bind позваляет передать ссылку на объект но НЕ ВЫЗЫВАЕТ функцию. Функция уже вызывается благодаря setTimeout'у
+	bind лишь СВЯЗЫВАЕТ данные
+	*/
+
+	/////////////////////////////////
+
+	var meat = {
+		pig: 0
+	}
+
+	function incMeat() {
+		this.pig++;
+		console.log(this.pig);
+		if(this.pig == 10) {
+			clearInterval(i);
+		}
+	}
+
+	var i = setInterval(incMeat.bind(meat), 100)
+
+	/*
+	Проверка запускается лишь на момент запуска скрипта. При дальнейших обновлениях свойства IF уже не запускается. Он и не может сам по себе запускаться. Поэтому мы его передаем в функцию, где IF запускается столько раз сколько функция.
+	if(this.pig == 10) {
+		clearInterval(i)
+	}
+	*/
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+call, apply, bind
+функции по ссылке
+
+1) Создать функцию, которая будет печатать по одной букве через таймер.
+На странице два div'a. В первом заранее заданный текст во второй текст будет добавляться динамически
+Пример:
+<div class="text">Hello world</div>
+<div class="result"></div>
+
+Во второй div текст должен добавляться по одной букве (Div клонироваться не должен. Пример демонстрирует состояние содержимого элемента)
+Пример:
+<div class="result">H</div>
+<div class="result">He</div>
+<div class="result">Hel</div>
+<div class="result">Hell</div>
+<div class="result">Hello</div>
