@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Методы массива</title>
+</head>
+<body>
+
+<script>
+	var arr = [1,2,3,4,5,6,7,8,9,10];
+	var fruits = ["apple","orange","plum"]
+
+	// .forEach при переборе массива данные отправляет через функцию callback
+	// в первый аргумент отправляется значение массива
+	// во второй позиция элемента
+
+	// forEach ничего не возвращает. Только перебирает
+	arr.forEach(function(item, index) {
+		console.log(item, index);
+	})
+
+	// filter возвращает новый массив на основе условия внутри функции callback
+	var filterArr = arr.filter(function(item, index) {
+		if(item > 5) {
+			return item
+		}
+	})
+
+	console.log(filterArr) // [6, 7, 8, 9, 10]
+
+	// map трансформирует текущий массив на основе условия внутри функции callback
+
+	var mapArr = arr.map(function(item, index) {
+		if(item > 5) {
+			return item
+		}
+	})
+
+	var newFruits = fruits.map(function(item) {
+		console.log(item);
+		console.log(item.length);
+		return item.length
+	})
+
+	console.log(newFruits) // [5, 6, 4]
+</script>
+
+</body>
+</html>

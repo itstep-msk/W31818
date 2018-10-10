@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arguments</title>
+</head>
+<body>
+
+<input class="name">
+<input class="greeting" type="submit" value="Приветствовать">
+<div class="result"></div>
+
+<script>
+	var nameFromInput = document.querySelector(".name");
+	var greeting = document.querySelector(".greeting");
+	var result = document.querySelector(".result");
+
+	greeting.addEventListener("click", function() {
+		console.log("Привет " + nameFromInput.value);
+		result.innerHTML += "Привет " + nameFromInput.value + "<br>";
+	})
+
+
+
+	///////////////////// ARGUMENTS
+	/*
+	arguments - специальное слово, которое доступно только внутри функций, 
+	собирает все переданные аргументы в виде массива.
+	*/
+	function hello(name){
+		console.log(arguments);
+		return "Привет " + name;
+	}
+
+	console.log(hello("Матвей",1,2,"Еще строка"))// "Привет Матвей"
+	console.log(hello("Кирилл"))// "Привет Кирилл"
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date</title>
+</head>
+<body>
+
+<div class="time"></div>
+
+<script>
+	// Создание даты
+	var date = new Date();
+
+	console.log(date);
+	console.log(date.getHours());
+	console.log(date.getMinutes());
+	console.log(date.getSeconds());
+
+	var time = document.querySelector(".time");
+
+	setInterval(function() {
+		date = new Date();
+		time.innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+	},1000)
+</script>
+
+</body>
+</html>
