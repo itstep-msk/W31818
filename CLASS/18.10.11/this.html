@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>THIS</title>
+</head>
+<body>
+
+<div class="apple">Яблочки зеленые</div>
+<div class="apple">Яблочки красные</div>
+<div class="apple">Яблочки свинцовые</div>
+
+<script>
+	var apple = document.querySelectorAll(".apple");
+
+	for(var i = 0; i < apple.length; i++) {
+		apple[i].addEventListener("click", function() {
+			console.log(this); // ссылается на текущий кликнутый элемент
+		})
+	}
+
+	////////////////////////////
+	var user = {
+		name: "Vasya",
+		greeting: function() {
+			return "Привет здравствуйте " + this.name // ссылается на текущий объект
+		}
+	}
+	console.log(user.greeting()) // "Привет здравствуйте Vasya"
+	///////////////////////////
+	function Animals(n) {
+		this.name = n; // ссылается на будущий объект, только в том случае если функция будет
+		console.log(this) // вызываться через оператор NEW
+ 	}
+ 	
+ 	var rabbit = new Animals("Banny"); // Animals {name: "Banny"}
+ 	console.log(rabbit.name) // "Banny"
+
+ 	// Такой вызов некорректный так как this указывает на window а у него нет свойство name
+ 	Animals(); // Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
+</script>
+
+<script>
+	/*
+	this - абстрактное выражение. Принимает разное значение в зависимости от контекста
+	вызова.
+
+	3 - контекста
+		1) DOM (например в методе addEventListener() ссылается на текущий элемент, на который
+		срабатывает событие)
+		2) Внутри объекта (this указывает на текущий объект)
+		ПРИМЕЧАНИЕ: 
+		Если this написан в функции то он ссылается на window при обычном
+		вызове функции.
+
+		Если this написан в функции то он ссылается на внутренний объект при вызове функции
+		через оператор NEW
+
+
+		3) Вне объекта (this указывает на объект window. В ES6 - undefined)
+	*/
+</script>
+
+</body>
+</html>

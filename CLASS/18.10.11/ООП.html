@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ООП</title>
+</head>
+<body>
+
+<script>
+	// ООП в функциональном стиле
+
+	function Machine() {
+		enabled = false;
+
+		this.enable = function() {
+			enabled = true;
+		}
+
+		this.disable = function() {
+			enabled = false;
+		}
+	}
+
+	function CoffeMachine () {
+		// var this = {}
+
+		// Наследование абстрактного класса
+		Machine.call(this);
+
+		var waterAmount = 0;
+
+		this.setWaterAmount = function(amount) {
+			waterAmount = amount
+		}
+		// return this
+	}
+
+	var bosch = new CoffeMachine();
+
+	console.log(bosch)
+	bosch.enable();
+
+	// ООП в прототипном стиле
+
+	// "Класс" в прототипном стиле
+	var Animals = {
+		name: null,
+		age: null,
+		legs: 4,
+		head: 1,
+		say: function(text) {
+			console.log(this.name + ": " + text);
+		}
+	}
+
+	var rabbit = {
+		jump: function() {
+			console.log("jump...")
+		}
+	}
+
+	rabbit.__proto__ = Animals;
+
+	console.log(rabbit);
+	console.log(rabbit.legs); // 4
+	rabbit.name = "banny";
+	console.log(rabbit.name) // "banny";
+
+	// ООП на классах
+
+	class AnimalsClass {
+		constructor(n, a) {
+			this.name = n;
+			this.age = a;
+		}
+
+		say(text) {
+			console.log("Говорит: " + text)
+		}
+	}
+
+	var dog = new AnimalsClass("Bobik", 0);
+	console.log(dog)
+	console.log(dog.name)
+
+	class Rabbit extends AnimalsClass {
+		jump() {
+			console.log("jump...")
+		}
+	}
+
+	var rabbitInstance = new Rabbit("Banny",10);
+	console.log(rabbitInstance)
+
+	class Duck extends AnimalsClass {
+		constructor(w,n,a) {
+			super(n,a);
+			this.wings = w;
+		}
+		swim() {
+			console.log("swimming...");
+		}
+	}
+
+	var duck = new Duck("2 крыла", "Уткаааааа", 100);
+	console.log(duck)
+
+	class WildDuck extends Duck {
+		constructor(level,w,n,a) {
+			super(w,n,a);
+			this.level = level;
+		}
+		angry() {
+			console.log("Die hard!!!");
+		}
+	}
+
+	var drake = new WildDuck(1000, "10-ть крыльев","Donald",999);
+	console.log(drake)
+	console.log(drake instanceof AnimalsClass)
+</script>
+
+
+</body>
+</html>

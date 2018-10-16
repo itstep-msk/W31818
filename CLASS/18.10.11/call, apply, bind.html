@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Call, apply, bind</title>
+</head>
+<body>
+
+<script>
+	var user = {
+		name: "Alex"
+	}
+
+	function hello(a,b,c) {
+		return "Привет " + this.name + " a:" + a + " b:" + b + " c:" + c;
+	}
+
+	console.log(hello(1,2,3)); // Привет a:1 b:2 c:3
+	console.log(hello.call()); // Привет a:undefined b:undefined c:undefined
+	console.log(hello.call(user,1,2,3)) // Привет Alex a:1 b:2 c:3
+
+	console.log(hello(1,2,3)); // Привет a:1 b:2 c:3
+	console.log(hello.apply()); // Привет a:undefined b:undefined c:undefined
+	console.log(hello.apply(user,[1,2,3])) // Привет Alex a:1 b:2 c:3
+
+	function helloConsole() {
+		console.log("Hello " + this.name);
+	}
+
+	setInterval(helloConsole.call(user), 1000); // вызовится один раз вне интервала
+	setInterval(helloConsole.bind(user), 1000);
+	
+	// bind связывает данные но не вызывает функцию
+	//helloConsole.bind(user)()
+</script>
+
+</body>
+</html>
