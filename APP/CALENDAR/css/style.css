@@ -2,6 +2,28 @@ body {
 	margin: 0;
 }
 
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.month-prev {
+    background-image: url("../img/arrow.png");
+    width: 18px;
+    height: 18px;
+    transform: rotateZ(180deg);
+    background-size: cover;
+}
+
+.month-next {
+    background-image: url("../img/arrow.png");
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+}
+
 .weekdays {
     display: flex;
     text-align: center;
@@ -25,4 +47,8 @@ body {
     background: purple;
     border: 1px solid red;
     box-sizing: border-box;
+}
+
+.current-day {
+    background: red;
 }
