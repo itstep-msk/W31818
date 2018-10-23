@@ -1,0 +1,28 @@
+body {
+	margin: 0;
+}
+
+.weekdays {
+    display: flex;
+    text-align: center;
+    color: white;
+}
+
+.weekday {
+    background: green;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    height: 100px;
+    width: calc(100% / 7);
+    background: purple;
+    border: 1px solid red;
+    box-sizing: border-box;
+}

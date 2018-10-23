@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bind</title>
+</head>
+<body>
+
+<div class="left">Кнопка left</div>
+<div class="right">Кнопка right</div>
+
+<script>
+	var left = document.querySelector(".left");
+	var right = document.querySelector(".right");
+	/*
+	showPressButton передали как ссылку на функцию
+	ссылка пишется без круглых скобок
+
+	left.addEventListener("click", showPressButton("left"))
+	Некорректная запись. Функция вызовится вне события клик
+
+	метод addEventListener внутри себя функции подставляет круглые скобки
+	для вызова
+
+	addEventListener(..., showPressButton)
+	Внутри функции во время клика второму аргументу подставляются скобки
+	showPressButton() и функция вызывается
+	*/
+	left.addEventListener("click", showPressButton)
+	
+	right.addEventListener("click", showPressButton.bind(null,"right"))
+
+	function showPressButton(side) {
+		console.log("Нажали на " + side)
+	}
+	///////////////////////////////////////
+	function greeting(name) {
+		console.log("Hello " + name);
+	}
+	/*
+	setInterval(greeting("Alex")) Функция вызывается вне таймера один раз
+	Некорректная запись
+	*/
+	setInterval(greeting, 1000); // Hello undefined ... много раз
+	setInterval(greeting.bind(null,"Alex"), 1000); // Hello Alex
+</script>
+
+</body>
+</html>
