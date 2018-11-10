@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+</head>
+<body>
+
+<div id="app">
+	<span v-if="visible">Яблоко</span>
+	<span v-if="!visible">Апельсин</span>
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	var app = new Vue({
+		el: "#app",
+		data: {
+			visible: true
+		}
+	})
+</script>
+</body>
+</html>

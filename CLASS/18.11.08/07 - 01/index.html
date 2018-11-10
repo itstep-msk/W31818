@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+</head>
+<body>
+
+<div id="app">
+	<food item="Яблоки" color="Зеленые"></food>
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	Vue.component("food", {
+		props: ["item","color"],
+		template: "<div>Привет из компонента {{ item }} {{ color }}</div>"
+	})
+	// Vue.component("НазваниеКомпонента", { template: "ТелоКомпонента" })
+	/*
+	function food(item) {
+		return "<div>Привет из компонента</div>" + item
+	}
+
+	food("Яблоки")
+	*/
+
+	var app = new Vue({
+		el: "#app"
+	})
+</script>
+</body>
+</html>

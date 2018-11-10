@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CLONE</title>
+</head>
+<body>
+
+<div class="rows">
+	<div class="row">
+		<input placeholder="Имя">
+		<input placeholder="Фамлия">
+		<input placeholder="Возраст">
+	</div>
+</div>
+<input type="submit" class="button" value="Добавить еще">
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+	var rows = $(".rows");
+	var row = $(".row");
+	var button = $(".button");
+
+	button.on("click", function() {
+		var clone = row.last().clone();
+
+		clone.children().each(function(/*index, item*/) {
+			/*
+			Обращаться к элементу либо через аргумент либо через this
+
+			console.log(this)
+			console.log(item)
+			*/
+			
+			$(this).val("");
+		})
+
+		rows.append(clone);
+	})
+	/*
+		$(".row input[type='text']")
+	*/
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+</head>
+<body>
+
+<div id="app">
+	<select v-model="arrayName">
+		<option value="vegetables">vegetables</option>
+		<option value="fruit">fruit</option>
+	</select>
+	<input v-model="arrayName">
+	<input v-model="foodName">
+	<button v-on:click="addFood">Добавить</button>
+	<food v-for="fruit in fruits" v-bind:item="fruit"></food>
+	<food v-for="vegetable in vegetables" v-bind:item="vegetable"></food>
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	Vue.component("food", {
+		props: ["item"],
+		template: "<div>{{ item }}</div>"
+	})
+
+	var app = new Vue({
+		el: "#app",
+		data: {
+			arrayName: "",
+			foodName: "",
+			fruits: ["apple", "orange", "plum"],
+			vegetables: ["tomato", "carrot", "potato"]
+		},
+		methods: {
+			addFood: function() {
+				this[this.arrayName].push(this.foodName);
+				/*
+				this["fruits"]
+				this.fruits
+				*/
+			}
+		}
+	})
+</script>
+</body>
+</html>

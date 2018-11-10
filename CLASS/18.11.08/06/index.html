@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+</head>
+<body>
+<style>
+	.password {
+		border-color: rgb(255,0,0);
+		outline: 0;
+	}
+</style>
+
+<div id="app">
+	<input v-model="message">
+	<input v-model="password" class="password" v-bind:style="'border-width:' + (10 - password.length) + 'px'">
+	<div v-if="message.length != 0 && message.length < 10">Вы ввели меньне 10 символов</div>
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	var app = new Vue({
+		el: "#app",
+		data: {
+			message: "",
+			password: ""
+		}
+	})
+</script>
+</body>
+</html>

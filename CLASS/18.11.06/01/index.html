@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+</head>
+<body>
+
+<div id="app">
+	{{ message }}
+	{{ singularity }}
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	var app = new Vue({
+		el: "#app",
+		data: {
+			message: "Привет мир",
+			singularity: true
+		}
+	})
+
+	/*
+	Vue принимает в качестве аргумента объект
+	Стандартные свойства
+	el - нахождение элемента
+	data - описания статичный свойств
+	methods - описание функций
+
+	app получает все те свойства, которые мы описали в аргументе.
+	Корневые свойства опускаются.
+	Чтобы добраться до singularity надо написать app.singularity и поменять или получить значение
+	*/
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SLIDE LIST</title>
+</head>
+<body>
+
+<div class="list">Яблоко</div>
+<div class="list">Апельсин</div>
+<div class="list">Манго</div>
+<div class="list">Яблоко</div>
+<div class="list">Апельсин</div>
+<div class="list">Манго</div>
+<div class="list">Яблоко</div>
+<div class="list">Апельсин</div>
+<div class="list">Манго</div>
+<div class="list">Яблоко</div>
+<div class="list">Яблоко</div>
+<div class="list">Апельсин</div>
+<div class="list">Манго</div>
+<div class="list">Яблоко</div>
+<div class="list">Апельсин</div>
+<div class="list">Манго</div>
+<div class="list">Яблоко</div>
+<div class="list">Апельсин</div>
+<div class="list">Манго</div>
+<div class="list">Яблоко</div>
+<div class="button">Показать остальные</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+	var list = $(".list");
+	var button = $(".button");
+	list.slice(5).hide();
+	/*
+	slice для работы с массиво. Аргументы(1: стартовая позиция, 2: конечная)
+	Если нужно от какого-то и до конца то нужно указать один аргумент
+	*/
+	button.on("click", function() {
+		// От 5-ого включительно и до конца массива
+		list.slice(5).slideToggle();
+	})
+</script>
+</body>
+</html>

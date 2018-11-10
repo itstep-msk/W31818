@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Склонение слов</title>
+</head>
+<body>
+
+<script>
+	function getSklonenie(n) {
+		return n + " Пересад" + ((n < 5 && n != 0) ? (n > 1) ? "ки" : "ка" : "ок")
+	}
+
+	console.log(getSklonenie(1)) // Пересадка
+	console.log(getSklonenie(2)) // Пересадки
+	console.log(getSklonenie(5)) // Пересадок
+	console.log(getSklonenie(0)) // Пересадок
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+</head>
+<body>
+
+<div id="app">
+	<div v-on:click="showMessage">Нажми...</div>
+	<div>{{ count }}</div>
+	<div v-on:click="changeCount">Inc count</div>
+	<div v-bind:style="'opacity: ' + 0.1 * count">Постепенно показываюсь</div>
+	<div v-if="count > 3 && count < 5">Покажусь если будет больше 3-х и менье 5</div>
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	var app = new Vue({
+		el: "#app",
+		data: {
+			count: 0
+		},
+		methods: {
+			showMessage: function() {
+				alert("Hello from Vue")
+			},
+			changeCount: function() {
+				this.count++;
+			}
+		}
+	})
+</script>
+</body>
+</html>
