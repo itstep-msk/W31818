@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue использование выражений JavaScript</title>
+</head>
+<body>
+
+<div id="app">
+	<div>{{ 2+2 }}</div>
+	<!-- <div> {{ var a = 5 }} </div> в этом нет смысла-->
+	<div>{{ (5 > 10) ? "5 больше 10":"5 меньше 10" }}</div>
+	<div v-for="item in stops">{{ item +" Пересад" + ((item < 5) ? (item > 1) ? "ки":"ка":"ок") }}</div>
+	<!-- (n < 5) ? (n > 1) ? "ки":"ка":"ок" -->
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	var app = new Vue({
+		el: "#app",
+		data: {
+			stops: [1,2,3,4,5]
+		}
+	})
+</script>
+</body>
+</html>

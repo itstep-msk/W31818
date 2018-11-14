@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue директивы</title>
+</head>
+<body>
+
+<div id="app">
+	<div v-bind:class="classList">Много классов</div>
+	<div :class="classList">Много классов</div>
+
+	<div v-on:click="showMessage">Нажми</div>
+	<div @click="showMessage">Нажми</div>
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	var app = new Vue({
+		el: "#app",
+		data: {
+			classList: ["apple","orange","plum"]
+		},
+		methods: {
+			showMessage: function() {
+				alert("Hello world")
+			}
+		}
+	})
+</script>
+</body>
+</html>

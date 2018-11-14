@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue атрибуты</title>
+</head>
+<body>
+
+<style>
+	.apple {
+		background: green;
+	}
+</style>
+
+<div id="app">
+	<!-- <div class="orange"></div> -->
+	<!-- <div class="fruits"></div> -->
+	<!-- <div class="{{ fruits }}"></div> -->
+	<div v-bind:class="fruits">Hello world</div> <!-- <div class="apple">Hello world</div> -->
+	<div v-bind:visible="hidden">true/false in attribute</div>
+	<!-- в зависимости от содержимого свойства(hidden) атрибут удаляеся или остается -->
+
+	<!-- hidden = true -->
+	<!-- <div visible="visible">true/false in attribute</div> -->
+
+	<!-- hidden = false -->
+	<!-- <div>true/false in attribute</div> -->
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	var app = new Vue({
+		el: "#app",
+		data: {
+			fruits: "apple",
+			hidden: false
+		}
+	})
+</script>
+</body>
+</html>

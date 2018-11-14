@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue свойства и методы</title>
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	var fruits = { apple: 1 }
+
+	var app = new Vue({
+		el: "#app",
+		data: fruits // data : { apple: 1 }
+	})
+
+	fruits.orange = 2;
+
+	console.log(app)
+
+	
+</script>
+</body>
+</html>

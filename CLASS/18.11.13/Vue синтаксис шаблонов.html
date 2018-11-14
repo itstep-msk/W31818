@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue синтаксис шаблонов</title>
+</head>
+<body>
+
+<div id="app">
+	<!-- Интерполяция -->
+	<div v-once> {{ message }} </div>
+	<div v-html="cars"></div>
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+	/* OFFTOP PHP
+	Интерполяция переменных
+	$apple = 1
+	echo "Value apple = $apple";
+	*/
+	var app = new Vue({
+		el: "#app",
+		data: {
+			message: "Hello",
+			cars: "<h1>Cars in h1</h1>"
+		}
+	})
+</script>
+</body>
+</html>
