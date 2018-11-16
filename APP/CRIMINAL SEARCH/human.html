@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Make human</title>
+</head>
+<body>
+
+<style>
+	.badges {
+		font-family: Arial;
+	    width: 50%;
+    	display: inline-block;
+	}
+	.badge-item {
+		display: inline-flex;
+	    border: 1px solid #ddd;
+	    padding: 5px;
+	    width: 220px;
+	}
+	.user-pic {
+		width: 80px;
+    	height: 100px;
+    	background: #ddd;
+	}
+	.user-info {
+		padding-left: 10px;
+	}
+	.user-name {
+	    font-size: 20px;
+    	margin-bottom: 10px;
+	}
+
+	.photo-robot {
+		width: 50%;
+	    height: 300px;
+	    display: inline-block;
+	    vertical-align: top;
+	    margin-left: -4px;
+	}
+
+	.find {
+	    padding: 10px 20px;
+    	font-size: 50px;
+    	margin-top: 20px;
+	}
+</style>
+
+<div class="badges"></div>
+<div class="photo-robot" id="photo-robot"></div>
+<button class="find">Искать преступника</button>
+
+<script src="faces.js"></script>
+<script>
+	var badges = document.querySelector(".badges");
+	var badge = `
+		<div class="badge-item">
+			<div class="user-pic"></div>
+			<div class="user-info">
+				<div class="user-name"></div>
+				<div class="user-age"></div>
+				<div class="user-height"></div>
+			</div>
+		</div>`;
+
+	var names = ["Никита","Денис","Кирилл","Ярослав","Артур","Татьяна","Оксана","Матвей","Олег","Александра"];
+	var suspects = [];
+
+	function Human(name, age, height) {
+		this.name = name;
+		this.age = age;
+		this.height = height;
+	}
+
+	function rand(min, max) {
+		return Math.floor(Math.random()*(max-min)+min);
+	}
+
+	function makeHuman(n) {
+		var humans = [];
+
+		for(var i = 0; i < n; i++) {
+			humans.push(new Human(
+				names[rand(0, names.length-1)], // Случайное имя
+				rand(18,60), // Случайный возраст
+				rand(140,200) // Случайный рост
+				))
+		}
+
+		function addInfo() {
+			humans = humans.sort(function(a,b) {
+				return a.age-b.age;
+			})
+
+			for(var i = 0; i < n; i++) {
+				// Добавляем bagde'ы
+				badges.innerHTML += badge;
+
+				// ищем коллекцию элементов и обращаемся к конкретному по индексу
+				badges.querySelectorAll(".user-pic")[i].setAttribute("id", "user" + i);
+				badges.querySelectorAll(".user-name")[i].innerHTML = humans[i].name;
+				badges.querySelectorAll(".user-age")[i].innerHTML = "Возраст: " + humans[i].age;
+				badges.querySelectorAll(".user-height")[i].innerHTML = "Рост: " + humans[i].height;
+
+				suspects.push(faces.generate("user" + i));
+			}
+		}
+
+		addInfo();
+
+		return humans;
+	}
+
+	console.log(makeHuman(10));
+
+	// PHOTO-ROBOT
+	var face = faces.generate("photo-robot");
+	var find = document.querySelector(".find");
+
+	find.addEventListener("click", function() {
+		for(var i = 0; i < suspects.length; i++) {
+			if(face.color == suspects[i].color) {
+				document.querySelectorAll(".badge-item")[i].style.background = "red";
+			}
+		}
+	})
+	
+</script>
+</body>
+</html>

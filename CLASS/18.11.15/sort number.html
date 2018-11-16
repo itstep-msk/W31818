@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sort number</title>
+</head>
+<body>
+
+<script>
+	var number = [3,4,6,87,9,54,10,65,34];
+
+	var minToMaxDefault = number.sort();
+	//console.log(minToMaxDefault)
+
+	console.log(number)
+	var minToMax = number.sort(function(a,b) {
+		console.log("a: " + a + " b:" + b)
+		return a-b
+	})
+	console.log(minToMax)
+</script>
+</body>
+</html>
