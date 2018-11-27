@@ -1,0 +1,66 @@
+1) Создать функцию, которая AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB превращает в A4B3C2XYZD4E3F3A6B28
+
+2) Реализовать функцию, которая возвращает значение из объекта
+
+var obj = { 
+  a: { 
+    b: { 
+      c: 'd' 
+    },
+    e: 'f'
+  }
+};
+
+get(obj, 'a.b'); // {c:"d"}
+
+get(obj, 'a.b.c'); // "d"
+
+3) Создать функцию, которая перебирает массив и возвращает только цифры и дополнительно умножает на два
+var array = [1, '2', '3px', {a: 4}, 5, '', null, false, true]; // [2, 10]
+
+4) Найти ошибу в функции и исправить. Вам попадается код, который что-то делает. Заказчику не известно, что было и как оно работало. Известно, что функция считает все то, что поступает в аргументы и выдает сумму чисел а аргументы могут быть разного типа.
+
+	function isArray(arr) {
+		return Array.isArray(arr)
+	}
+
+	function flexsum(a) {
+		var total = 0;
+
+		for(var i = 0; i < arguments.length; i++) {
+			var element = arguments[i];
+			var n;
+
+			if(element === "null") {
+				continue;
+			}
+
+			if(isArray(element)) {
+				n = flexsum.apply(null, element)
+			}
+
+			if(typeof element === "function") {
+				n = element();
+				if(isArray(n)) {
+					n = flexsum.apply(null, n)
+				}
+			} else {
+				n = Number(element);
+			}
+
+			if(isNaN(n)) {
+				throw Error("flexsum(): невозможно преобраовать " + element + " в число");
+			}
+
+			total += n;
+		}
+
+		return total;
+	}
+
+	console.log(flexsum(1,2,3)); // 6
+	console.log(flexsum([1,2,3])); // flexsum(): невозможно преобраовать 1,2,3 в число
+
+	// Дальнейшие функции не работаюют так как throw похож на return. Выдает ошибку и останавливает скрипт.
+	console.log(flexsum(function() { return [1,2,3]}))
+	console.log(flexsum(function() { return 10 }))
