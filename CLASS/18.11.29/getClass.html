@@ -1,0 +1,14 @@
+<script>
+	function getClass(value) {
+		return Object.prototype.toString.call(value)
+		// ~ return this.class // "Object"
+	}
+
+	//alert({x:1}) // [object Object]
+	console.log(getClass([1,2,3])) // [object Array]
+	console.log(getClass(123)) // [object Number]
+	console.log(getClass("Hello")) // [object String]
+	console.log(getClass({})) // [object Object]
+	console.log(getClass(function() {})) // [object Function]
+
+</script>
