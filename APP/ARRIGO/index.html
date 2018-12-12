@@ -4,6 +4,7 @@
 	<title>Arrigo</title>
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,19 +28,31 @@
 
 <div class="portfolio wrapper-small">
 	<div class="portfolio__item portfolio__item--right portfolio__item--column">
-		<div class="portfolio__img" style="width: 970px;height: 645px;"></div>
+		<div class="portfolio__img">
+			<div class="portfolio__img-desc">Photography</div>
+			<div class="portfolio__img-item" style="width: 970px;height: 645px;"></div>
+		</div>
 		<div class="portfolio__desc portfolio__desc-line--left">Silence And Noise</div>
 	</div>
 	<div class="portfolio__item portfolio__item--children-center">
-		<div class="portfolio__img" style="width: 470px;height: 645px;"></div>
+		<div class="portfolio__img">
+			<div class="portfolio__img-desc">Photography</div>
+			<div class="portfolio__img-item" style="width: 470px;height: 645px;"></div>
+		</div>
 		<div class="portfolio__desc portfolio__desc-line--left">Premium Furniture</div>
 	</div>
 	<div class="portfolio__item portfolio__item--children-center portfolio__item--row-reverse">
-		<div class="portfolio__img" style="width: 470px;height: 645px;"></div>
+		<div class="portfolio__img">
+			<div class="portfolio__img-desc">Photography</div>
+			<div class="portfolio__img-item" style="width: 470px;height: 645px;"></div>
+		</div>
 		<div class="portfolio__desc portfolio__desc-line--right">Premium Furniture</div>
 	</div>
 	<div class="portfolio__item portfolio__item--left portfolio__item--column">
-		<div class="portfolio__img" style="width: 970px;height: 645px;"></div>
+		<div class="portfolio__img">
+			<div class="portfolio__img-desc">Photography</div>
+			<div class="portfolio__img-item" style="width: 970px;height: 645px;"></div>
+		</div>
 		<div class="portfolio__desc portfolio__desc-line--left portfolio__desc--margin-left">Silence And Noise</div>
 	</div>
 	<div class="portfolio__button">View all portfolio</div>
@@ -59,7 +72,9 @@
 			Vestibulum sed turpis ut odio lobortis pellentesque.
 		</div>
 		<div class="activity__count"></div>
-		<div class="activity__icon"></div>
+		<div class="activity__icon">
+			<i class="fas fa-pen-nib"></i>
+		</div>
 	</div>
 	<div class="activity__item">
 		<div class="activity__header">Interior Design</div>
@@ -69,7 +84,9 @@
 			Vestibulum sed turpis ut odio lobortis pellentesque.
 		</div>
 		<div class="activity__count"></div>
-		<div class="activity__icon"></div>
+		<div class="activity__icon">
+			<i class="fas fa-pencil-alt"></i>
+		</div>
 	</div>
 	<div class="activity__item">
 		<div class="activity__header">Interior Design</div>
@@ -79,7 +96,9 @@
 			Vestibulum sed turpis ut odio lobortis pellentesque.
 		</div>
 		<div class="activity__count"></div>
-		<div class="activity__icon"></div>
+		<div class="activity__icon">
+			<i class="far fa-window-restore"></i>
+		</div>
 	</div>
 	<div class="activity__item">
 		<div class="activity__header">Interior Design</div>
@@ -89,7 +108,9 @@
 			Vestibulum sed turpis ut odio lobortis pellentesque.
 		</div>
 		<div class="activity__count"></div>
-		<div class="activity__icon"></div>
+		<div class="activity__icon">
+			<i class="fas fa-sticky-note"></i>
+		</div>
 	</div>
 </div>
 <div class="activity-nav wrapper-small">
@@ -111,14 +132,18 @@
 <div class="reviews wrapper">
 	<div class="reviews-box wrapper-small">
 		<div class="reviews__nav">
-			<div class="reviews__nav-arrow-up"></div>
+			<div class="reviews__nav-arrow-up">
+				<i class="fas fa-angle-up"></i>
+			</div>
 			<div class="reviews__nav-dots">
 				<div class="reviews__nav-dot"></div>
 				<div class="reviews__nav-dot reviews__nav-dot--active"></div>
 				<div class="reviews__nav-dot"></div>
 				<div class="reviews__nav-dot"></div>
 			</div>
-			<div class="reviews__nav-arrow-down"></div>
+			<div class="reviews__nav-arrow-down">
+				<i class="fas fa-angle-down"></i>
+			</div>
 		</div>
 		<div class="reviews__item">
 			<div class="reviews__item-user-pic"></div>
@@ -129,7 +154,9 @@
 			<div class="reviews__item-user-desc">Art Director</div>
 		</div>
 		<div class="reviews__count">
-			
+			<div class="reviews__count-current">01</div>
+			<div class="reviews__count-total">04</div>
+			<div class="reviews__count-separator"></div>
 		</div>
 	</div>
 </div>
@@ -158,35 +185,45 @@
 		<div class="event__box wrapper-small">
 			<div class="event__date">25 Sep 2018</div>
 			<div class="event__caption">A World of Infinite Opportunities</div>
-			<div class="event__button"></div>
+			<div class="event__button">
+				<i class="fas fa-arrow-right"></i>
+			</div>
 		</div>
 	</div>
 	<div class="event__item">
 		<div class="event__box wrapper-small">
 			<div class="event__date">25 Sep 2018</div>
 			<div class="event__caption">A World of Infinite Opportunities</div>
-			<div class="event__button"></div>
+			<div class="event__button">
+				<i class="fas fa-arrow-right"></i>
+			</div>
 		</div>
 	</div>
 	<div class="event__item">
 		<div class="event__box wrapper-small">
 			<div class="event__date">25 Sep 2018</div>
 			<div class="event__caption">A World of Infinite Opportunities</div>
-			<div class="event__button"></div>
+			<div class="event__button">
+				<i class="fas fa-arrow-right"></i>
+			</div>
 		</div>
 	</div>
 	<div class="event__item">
 		<div class="event__box wrapper-small">
 			<div class="event__date">25 Sep 2018</div>
 			<div class="event__caption">A World of Infinite Opportunities</div>
-			<div class="event__button"></div>
+			<div class="event__button">
+				<i class="fas fa-arrow-right"></i>
+			</div>
 		</div>
 	</div>
 	<div class="event__item">
 		<div class="event__box wrapper-small">
 			<div class="event__date">25 Sep 2018</div>
 			<div class="event__caption">A World of Infinite Opportunities</div>
-			<div class="event__button"></div>
+			<div class="event__button">
+				<i class="fas fa-arrow-right"></i>
+			</div>
 		</div>
 	</div>
 </div>
@@ -203,33 +240,42 @@
 		<div class="contacts__caption">Send Message</div>
 		<div class="contacts__field">
 			<input class="contacts__input">
+			<div class="contacts__label">Your name</div>
 		</div>
 		<div class="contacts__field">
 			<input class="contacts__input">
+			<div class="contacts__label">Your e-mail</div>
 		</div>
 		<div class="contacts__field">
 			<textarea class="contacts__textarea"></textarea>
+			<div class="contacts__label">Your message</div>
 		</div>
 		<div class="contacts__button">Send message</div>
 	</div>
 	<div class="contacts__map"></div>
 	<div class="contacts__triggers">
 		<div class="contacts__trigger-item">
-			<div class="contacts__trigger-icon"></div>
+			<div class="contacts__trigger-icon">
+				<i class="fas fa-location-arrow"></i>
+			</div>
 			<div class="contacts__trigger-content">
 				4575 Redbud Drive Brooklyn<br>
 				NY 11206 USA
 			</div>
 		</div>
 		<div class="contacts__trigger-item">
-			<div class="contacts__trigger-icon"></div>
+			<div class="contacts__trigger-icon">
+				<i class="fas fa-phone"></i>
+			</div>
 			<div class="contacts__trigger-content">
 				+1(347)783-92-96<br>
 				+1(347)783-19-00
 			</div>
 		</div>
 		<div class="contacts__trigger-item">
-			<div class="contacts__trigger-icon"></div>
+			<div class="contacts__trigger-icon">
+				<i class="fas fa-envelope"></i>
+			</div>
 			<div class="contacts__trigger-content">
 				<span>arrigo@sabbani.org</span>
 			</div>
@@ -242,10 +288,18 @@
 	</div>
 	<div class="logo logo--grey">Arrigo Sabbani</div>
 	<div class="footer__icons">
-		<div class="footer__icon"></div>
-		<div class="footer__icon"></div>
-		<div class="footer__icon"></div>
-		<div class="footer__icon"></div>
+		<div class="footer__icon">
+			<i class="fab fa-facebook-f"></i>
+		</div>
+		<div class="footer__icon">
+			<i class="fab fa-twitter"></i>
+		</div>
+		<div class="footer__icon">
+			<i class="fab fa-instagram"></i>
+		</div>
+		<div class="footer__icon">
+			<i class="fab fa-behance"></i>
+		</div>
 	</div>
 </div>
 <script src="js/script.js"></script>
