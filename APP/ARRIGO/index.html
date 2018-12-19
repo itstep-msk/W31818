@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slick.css">
 </head>
 <body>
 
@@ -13,11 +14,11 @@
 	<div class="header wrapper">
 		<div class="logo">Arrigo Sabbani</div>
 		<div class="nav">
-			<div class="nav__item">Pages</div>
-			<div class="nav__item">Portfolio</div>
-			<div class="nav__item">Blog</div>
-			<div class="nav__item">About</div>
-			<div class="nav__item">Contact</div>
+			<a href="#" class="nav__item">Pages</a>
+			<a href="#" class="nav__item">Portfolio</a>
+			<a href="#" class="nav__item">Blog</a>
+			<a href="#" class="nav__item">About</a>
+			<a href="#" class="nav__item">Contact</a>
 		</div>
 	</div>
 	<div class="wrapper">
@@ -63,7 +64,7 @@
 		</div>
 	</div>
 </div>
-<div class="activity">
+<div class="activity js-activity">
 	<div class="activity__item">
 		<div class="activity__header">Interior Design</div>
 		<div class="activity__desc">
@@ -112,11 +113,27 @@
 			<i class="fas fa-sticky-note"></i>
 		</div>
 	</div>
+	<div class="activity__item">
+		<div class="activity__header">Interior Design</div>
+		<div class="activity__desc">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Vestibulum sed turpis ut odio lobortis pellentesque.
+			Vestibulum sed turpis ut odio lobortis pellentesque.
+		</div>
+		<div class="activity__count"></div>
+		<div class="activity__icon">
+			<i class="fas fa-pen-nib"></i>
+		</div>
+	</div>
 </div>
 <div class="activity-nav wrapper-small">
 	<div class="activity-nav__arrows">
-		<div class="activity-nav__arrow-left"></div>
-		<div class="activity-nav__arrow-right"></div>
+		<div class="activity-nav__arrow js-activity-nav-arrow-left">
+			<i class="fas fa-angle-left"></i>
+		</div>
+		<div class="activity-nav__arrow js-activity-nav-arrow-right">
+			<i class="fas fa-angle-right"></i>
+		</div>
 	</div>
 	<div class="activity-nav__numbers"></div>
 </div>
@@ -132,30 +149,43 @@
 <div class="reviews wrapper">
 	<div class="reviews-box wrapper-small">
 		<div class="reviews__nav">
-			<div class="reviews__nav-arrow-up">
+			<div class="reviews__nav-arrow-up js-reviews-nav-arrow-up">
 				<i class="fas fa-angle-up"></i>
 			</div>
-			<div class="reviews__nav-dots">
-				<div class="reviews__nav-dot"></div>
-				<div class="reviews__nav-dot reviews__nav-dot--active"></div>
-				<div class="reviews__nav-dot"></div>
-				<div class="reviews__nav-dot"></div>
-			</div>
-			<div class="reviews__nav-arrow-down">
+			<div class="reviews__nav-dots js-reviews-nav-dots"></div>
+			<div class="reviews__nav-arrow-down js-reviews-nav-arrow-down">
 				<i class="fas fa-angle-down"></i>
 			</div>
 		</div>
-		<div class="reviews__item">
-			<div class="reviews__item-user-pic"></div>
-			<div class="reviews__item-content">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at purus id neque sollicitudin mollis. Donec eget vulputate dui. Nullam dui felis, faucibus nec urna id, sagittis scelerisque quam. Nulla velit nunc, elementum ac pharetra eu, rhoncus non ante. Duis non malesuada nisi. Curabitur at rhoncus sapien, a aliquam odio.
+		<div class="reviews__items js-reviews-items">
+			<div class="reviews__item">
+				<div class="reviews__item-user-pic"></div>
+				<div class="reviews__item-content">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at purus id neque sollicitudin mollis. Donec eget vulputate dui. Nullam dui felis, faucibus nec urna id, sagittis scelerisque quam. Nulla velit nunc, elementum ac pharetra eu, rhoncus non ante. Duis non malesuada nisi. Curabitur at rhoncus sapien, a aliquam odio.
+				</div>
+				<div class="reviews__item-user-name">Sarah Haynes</div>
+				<div class="reviews__item-user-desc">Art Director</div>
 			</div>
-			<div class="reviews__item-user-name">Sarah Haynes</div>
-			<div class="reviews__item-user-desc">Art Director</div>
+			<div class="reviews__item">
+				<div class="reviews__item-user-pic"></div>
+				<div class="reviews__item-content">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at purus id neque sollicitudin mollis. Donec eget vulputate dui. Nullam dui felis, faucibus nec urna id, sagittis scelerisque quam. Nulla velit nunc, elementum ac pharetra eu, rhoncus non ante. Duis non malesuada nisi. Curabitur at rhoncus sapien, a aliquam odio.
+				</div>
+				<div class="reviews__item-user-name">Sarah Haynes</div>
+				<div class="reviews__item-user-desc">Art Director</div>
+			</div>
+			<div class="reviews__item">
+				<div class="reviews__item-user-pic"></div>
+				<div class="reviews__item-content">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at purus id neque sollicitudin mollis. Donec eget vulputate dui. Nullam dui felis, faucibus nec urna id, sagittis scelerisque quam. Nulla velit nunc, elementum ac pharetra eu, rhoncus non ante. Duis non malesuada nisi. Curabitur at rhoncus sapien, a aliquam odio.
+				</div>
+				<div class="reviews__item-user-name">Sarah Haynes</div>
+				<div class="reviews__item-user-desc">Art Director</div>
+			</div>
 		</div>
 		<div class="reviews__count">
-			<div class="reviews__count-current">01</div>
-			<div class="reviews__count-total">04</div>
+			<div class="reviews__count-current js-reviews-count-current">01</div>
+			<div class="reviews__count-total js-reviews-count-total">04</div>
 			<div class="reviews__count-separator"></div>
 		</div>
 	</div>
@@ -302,6 +332,8 @@
 		</div>
 	</div>
 </div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
