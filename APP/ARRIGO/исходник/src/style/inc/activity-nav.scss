@@ -1,0 +1,18 @@
+.activity-nav {
+    height: 12px;
+}
+
+.activity-nav__arrows {
+    height: 20px;
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.activity-nav__arrow {
+    width: 10px;
+    height: 15px;
+    margin-top: -5px;
+    color: #878787;
+}

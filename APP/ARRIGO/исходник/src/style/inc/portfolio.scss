@@ -1,0 +1,109 @@
+.portfolio {
+    margin-top: -150px;
+
+    &__item {
+        display: flex;
+        margin-bottom: 150px;
+
+        &:first-child {
+            margin-bottom: 140px;
+        }
+
+        &--right {
+            align-items: flex-end;
+        }
+
+        &--left {
+            align-items: flex-start;
+        }
+
+        &--column {
+            flex-direction: column;
+        }
+
+        &--children-center {
+            align-items: center;
+
+            & .portfolio__desc {
+                margin-left: 80px;
+                margin-top: 0px;
+            }
+        }
+
+        &--row-reverse {
+            flex-direction: row-reverse;
+
+            & .portfolio__desc {
+                margin-left: 0px;
+                margin-right: 80px;
+            }
+        }
+    }
+
+    &__img {
+        display: flex;
+    }
+
+    &__img-desc {
+        display: flex;
+        flex-direction: column-reverse;
+        transform: rotateZ(-90deg) translateX(100%) translateY(-18px);
+        transform-origin: 100% 100%;
+        font-size: 14px;
+    }
+
+    &__img-item {
+        background: green;
+    }
+
+    &__desc {
+        font-size: 36px;
+        font-weight: 300;
+        margin-top: 15px;
+        position: relative;
+
+        &--margin-left {
+            margin-left: 125px;
+        }
+    }
+
+    &__desc-line {
+        &--right {
+            &:before {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 1px;
+                background: #b58c70;
+                position: absolute;
+                right: -125px;
+                top: 30px;
+            }
+        }
+        &--left {
+            &:before {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 1px;
+                background: #b58c70;
+                position: absolute;
+                left: -125px;
+                top: 30px;
+            }
+        }
+    }
+
+    &__button {
+        display: table;
+        border: 2px solid #b88c71;
+        margin: 0 auto;
+        margin-top: -12px;
+        padding: 16px 48px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #b68d6f;
+    }
+}
